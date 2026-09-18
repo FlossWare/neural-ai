@@ -40,3 +40,14 @@ A disposable model adapter may be used before Loom is sufficiently mature for th
 ## Status
 
 Research / experimental.
+
+
+## First experiment
+
+The initial implementation establishes a narrow teacher boundary:
+
+- `Teacher` accepts a task and question and returns an explicit answer plus confidence.
+- `FakeTeacher` makes acquisition deterministic and testable.
+- `TeacherDataset` turns teacher interaction into repeatable acquired knowledge.
+
+No model SDK is required yet. The eventual model-backed implementation will sit behind this boundary and can later be replaced by the Loom/loom-ai model-provider contracts without changing the research model.
